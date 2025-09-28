@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório do Build Automático - GitHub Actions</title>
+</head>
+<body>
+  <h2>Relatório do Build Automático (GitHub Actions)</h2>
+  
+  <p><b>Status:</b> Sucesso ✅</p>
+  
+  <h3>Log Principal:</h3>
+  <pre>
+  [✔] Build concluído com sucesso no GitHub Actions
+  Workflow: docker-build.yml
+  </pre>
+  
+  <h3>Resumo das tentativas de correção:</h3>
+  <ul>
+    <li>Commit 1: Adiciona workflow do GitHub Actions para testar build</li>
+    <li>Commit 2: Atualizando alguns dos arquivos</li>
+    <li>Commit 3: Criando o arquivo de Relatório Actions</li>
+  </ul>
+  
+  <h3>Observações:</h3>
+  <p>No ambiente local o Docker não funcionou corretamente devido ao seguinte erro: 
+    Virtualization support not detected, mesmo com virtualização na bios da máquina 
+    ligada. </p> 
+    
+    <img src="img/erro-docker.png" alt="Erro do Docker Desktop">
+    
+    <p>Entretanto, no GitHub Actions o build rodou normalmente, confirmando que 
+    o Dockerfile e a configuração do workflow estavam corretos.</p>
+
+</body>
+</html>
