@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre - Tudo sobre Docker</title>
+
+  <!-- Fonte Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa url('https://www.transparenttextures.com/patterns/cubes.png');
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Conteúdo principal */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    
+    /* Título da Página */
+    h1 {
+      font-size: 3.5em;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #1d9bf0;
+      text-shadow: 0px 4px 15px rgba(29, 155, 240, 0.5);
+      margin-bottom: 40px;
+    }
+
+    /* Títulos das Seções */
+    h2 {
+      font-size: 2.2em;
+      font-weight: 500;
+      color: #333;
+      margin-top: 30px;
+      border-bottom: 3px solid #1d9bf0;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    /* Parágrafos */
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      color: #555;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    /* Navegação Superior */
+    .top-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+    }
+
+    .top-nav a {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      background-color: #1d9bf0;
+      border-radius: 8px;
+      transition: transform 0.2s, background-color 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    .top-nav a.back-button {
+        font-size: 1.5em; /* Aumenta o tamanho da seta */
+        padding: 8px 15px;
+    }
+
+    .top-nav a:hover {
+      background-color: #1479b8;
+      transform: scale(1.08);
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 30px 50px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+      flex: 1;
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-center {
+      text-align: center;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    .footer-right {
+      text-align: right;
+      font-style: italic;
+    }
+
+    .footer-left a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .footer-left img {
+      width: 22px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+    
+    <br><br><br>
+  <!-- Navegação Superior -->
+  <div class="top-nav">
+    <a href="index.html" class="back-button">&larr;</a>
+    <div class="nav-links">
+      <a href="conceitos.html">Conceitos</a>
+      <a href="vantagens.html">Vantagens</a>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="main-content">
+    <h1>Sobre o Docker</h1>
+
+    <section>
+      <h2>O que é Docker?</h2>
+      <p>
+        Docker é uma plataforma de código aberto que utiliza a virtualização no nível do sistema operacional para entregar software em pacotes chamados contêineres. Esses contêineres são isolados uns dos outros e agrupam seus próprios softwares, bibliotecas e arquivos de configuração, mas compartilham o mesmo kernel do sistema operacional. Isso os torna mais leves e eficientes em termos de recursos do que as máquinas virtuais tradicionais. Em essência, o Docker permite que os desenvolvedores empacotem uma aplicação com todas as suas dependências em um contêiner que pode ser executado em qualquer máquina que tenha o Docker instalado, garantindo consistência entre os ambientes de desenvolvimento, teste e produção.
+      </p>
+    </section>
+
+    <section>
+      <h2>Como Surgiu?</h2>
+      <p>
+        O Docker foi lançado em 2013 pela empresa dotCloud, Inc., que mais tarde mudou seu nome para Docker, Inc. A empresa, que atuava como uma Plataforma como Serviço (PaaS), desenvolveu a tecnologia internamente para otimizar a implantação de aplicações de seus clientes. A ideia era criar uma maneira mais eficiente de construir, implantar e gerenciar aplicações em diferentes ambientes. A tecnologia foi baseada em conceitos existentes de contêineres Linux, como o LXC, mas o Docker simplificou e padronizou o processo, tornando-o acessível a um público muito mais amplo de desenvolvedores e administradores de sistemas. O projeto foi aberto como código-fonte e rapidamente ganhou popularidade na comunidade de tecnologia.
+      </p>
+    </section>
+
+    <section>
+      <h2>Para que Serve?</h2>
+      <p>
+        O Docker serve para simplificar e acelerar o ciclo de vida do desenvolvimento de software. Ele permite que os desenvolvedores criem ambientes isolados e portáteis para suas aplicações. Isso resolve o clássico problema de "funciona na minha máquina, mas não na produção", pois o contêiner se comporta da mesma forma, independentemente de onde é executado. As principais utilidades do Docker incluem a implantação rápida de aplicações, a criação de arquiteturas de microsserviços, a garantia de consistência entre diferentes estágios do desenvolvimento e a otimização do uso de recursos de infraestrutura. Além disso, ele é fundamental em práticas de DevOps, facilitando a integração e a entrega contínua (CI/CD) de software.
+      </p>
+    </section>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <a href="https://www.linkedin.com/in/miguel-mella-8981ba216/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn
+        </a>
+        <a href="https://github.com/MiguelMellaZZZ" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub
+        </a>
+      </div>
+      <div class="footer-center">
+        Avaliação - Mini Site Docker <br>
+        Professor José Guilherme
+      </div>
+      <div class="footer-right">
+        Ass. Calma Calabreso
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

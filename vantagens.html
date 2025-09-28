@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vantagens - Tudo sobre Docker</title>
+
+  <!-- Fonte Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa url('https://www.transparenttextures.com/patterns/cubes.png');
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Conteúdo principal */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 20px 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    
+    /* Título da Página */
+    h1 {
+      font-size: 3.5em;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #1d9bf0;
+      text-shadow: 0px 4px 15px rgba(29, 155, 240, 0.5);
+      margin-bottom: 40px;
+    }
+
+    /* Títulos das Seções */
+    h2 {
+      font-size: 2.2em;
+      font-weight: 500;
+      color: #333;
+      margin-top: 30px;
+      padding-bottom: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    h2.vantagens {
+        border-bottom: 3px solid #28a745;
+    }
+
+    h2.desvantagens {
+        border-bottom: 3px solid #dc3545;
+    }
+    
+    .material-icons {
+        font-size: 1.2em;
+    }
+
+    /* Listas */
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        max-width: 700px;
+    }
+
+    li {
+        font-size: 1.1em;
+        color: #555;
+        padding: 12px 0 12px 30px;
+        position: relative;
+        line-height: 1.6;
+        border-bottom: 1px solid #eee;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    li::before {
+        font-family: 'Material Icons';
+        position: absolute;
+        left: 0;
+        top: 12px;
+        font-size: 20px;
+    }
+
+    .vantagens-list li::before {
+        content: 'check_circle';
+        color: #28a745;
+    }
+
+    .desvantagens-list li::before {
+        content: 'cancel';
+        color: #dc3545;
+    }
+
+    li strong {
+        color: #333;
+    }
+
+
+    /* Navegação Superior */
+    .top-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+    }
+
+    .top-nav a {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      background-color: #1d9bf0;
+      border-radius: 8px;
+      transition: transform 0.2s, background-color 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    .top-nav a.back-button {
+        font-size: 1.5em;
+        padding: 8px 15px;
+    }
+
+    .top-nav a:hover {
+      background-color: #1479b8;
+      transform: scale(1.08);
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 30px 50px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+      flex: 1;
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-center {
+      text-align: center;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    .footer-right {
+      text-align: right;
+      font-style: italic;
+    }
+
+    .footer-left a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .footer-left img {
+      width: 22px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegação Superior -->
+  <div class="top-nav">
+    <a href="index.html" class="back-button">&larr;</a>
+    <div class="nav-links">
+      <a href="sobre.html">Sobre</a>
+      <a href="conceitos.html">Conceitos</a>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="main-content">
+    <h1>Vantagens e Desvantagens</h1>
+
+    <section>
+      <h2 class="vantagens"><span class="material-icons">thumb_up</span> Vantagens</h2>
+      <ul class="vantagens-list">
+        <li><strong>Portabilidade:</strong> As aplicações funcionam da mesma forma em qualquer ambiente que suporte Docker, eliminando o clássico problema de "na minha máquina funciona".</li>
+        <li><strong>Eficiência e Leveza:</strong> Contêineres compartilham o kernel do sistema operacional do host, consumindo menos recursos (CPU, memória) que máquinas virtuais.</li>
+        <li><strong>Implantação Rápida:</strong> Contêineres iniciam em segundos, pois não precisam carregar um sistema operacional completo, agilizando os ciclos de desenvolvimento e teste.</li>
+        <li><strong>Isolamento:</strong> Aplicações e suas dependências são isoladas umas das outras, evitando conflitos de biblioteca e aumentando a segurança.</li>
+        <li><strong>Escalabilidade:</strong> É simples criar e destruir contêineres rapidamente para atender a picos de demanda, facilitando a escalabilidade horizontal.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="desvantagens"><span class="material-icons">thumb_down</span> Desvantagens</h2>
+      <ul class="desvantagens-list">
+        <li><strong>Curva de Aprendizado:</strong> Conceitos avançados como redes, volumes e orquestração exigem estudo e prática para serem dominados.</li>
+        <li><strong>Segurança do Kernel:</strong> Como o kernel é compartilhado, uma vulnerabilidade no sistema operacional do host pode, teoricamente, afetar todos os contêineres.</li>
+        <li><strong>Aplicações com Interface Gráfica:</strong> O Docker não é ideal para aplicações que dependem de uma interface gráfica do usuário (GUI), sendo focado em serviços de linha de comando.</li>
+        <li><strong>Gerenciamento em Larga Escala:</strong> Gerenciar um grande número de contêineres manualmente é complexo, exigindo o uso de ferramentas de orquestração como Kubernetes ou Docker Swarm.</li>
+        <li><strong>Desempenho:</strong> Embora mais rápido que uma VM, existe uma pequena sobrecarga de desempenho em comparação com a execução nativa de uma aplicação diretamente no servidor físico.</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <a href="https://www.linkedin.com/in/miguel-mella-8981ba216/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn
+        </a>
+        <a href="https://github.com/MiguelMellaZZZ" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub
+        </a>
+      </div>
+      <div class="footer-center">
+        Avaliação - Mini Site Docker <br>
+        Professor José Guilherme
+      </div>
+      <div class="footer-right">
+        Ass. Calma Calabreso
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
