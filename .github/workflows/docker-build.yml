@@ -1,8 +1,9 @@
-name: Testar build Docker
+name: Docker Build
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -10,9 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
+      # Faz o checkout do seu código
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Testar build Dockerfile
-        run: docker build -t teste-mini-site .
+      # Configura o Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
+      # Constrói a imagem a partir do Dockerfile
+      - name: Build Docker image
+        run: docker build -t meu-site .
+
+      # (Opcional) Testa a imagem rodando o container
+      - name: Run container test
+        run: |
+          docker run -d -p 8080:80 --name meu-site-test meu-site
+          sleep 5
+          docker ps -a
